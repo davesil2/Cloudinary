@@ -1,6 +1,6 @@
 # Cloudinary .Net SDK Console Application
 
-### How to use
+### How to Use
 
   Create launch.json file for Debugging
     .vscode/launch.json
@@ -14,13 +14,13 @@
         "request": "launch",
         "program": "${workspaceFolder}/bin/Debug/net9.0/cloudinary.dll",
         "args": [
-            "/file=/Users/david/Downloads/IMG_2019.jpeg",
-            "/cloudname=bp-dev",
-            "/apikey=162965161671763",
-            "/apisecret=1ZJB3fpHF39oxC3wt5hatRMoM0o",
-            "/uploadpreset=CoC File Uploads",
-            "/folder=Peoplesoft/Certificate of Conformance",
-            "/metadata=category=certificates_of_conformance|function=testing"
+            "/file=<file path>",
+            "/cloudname=<cloudinary cloud name>",
+            "/apikey=<apikey>",
+            "/apisecret=<apisecret>",
+            "/uploadpreset=<upload preset>",
+            "/folder=<folder path>",
+            "/metadata=<metadata key=value pair>|<metadata key=value pair"
         ]
     },
     {
@@ -30,7 +30,7 @@
     }
 ]
 ```
-### build executable
+### Build Executable
 
 * Create Independent Single File for execution (no .net dependency)
   * This will be a large file
@@ -39,3 +39,8 @@
 * Create executable - destination will require .Net framework version
 
 > dotnet publish -c Release -r win-x64 /p:PublishSingleFile=True
+
+
+### Application Usage
+
+> cloudinary.exe /file=<file path> /cloudname=<cloudinary cloud name> /apikey=<api key> /apisecret=<api secret> /uploadpreset=<upload preset> /folder=<cloudinary folder> /metadata=<metadate key=value pair>|metadata key=value pair>
